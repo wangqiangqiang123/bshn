@@ -1,4 +1,4 @@
--- Table structure for book 图书表、book_user_ref 读者图书关联关系表、lend_record 借阅记录表、b_user 用户表、role 角色表、auth 权限表、user_role_ref 用户角色关系表、role_auth_ref 角色权限关系表
+--  Table structure for book 图书表、book_user_ref 读者图书关联关系表、lend_record 借阅记录表、b_user 用户表、role 角色表、auth 权限表、user_role_ref 用户角色关系表、role_auth_ref 角色权限关系表
 
 DROP TABLE IF EXISTS book;
 CREATE TABLE book  (

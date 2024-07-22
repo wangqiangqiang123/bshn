@@ -1,4 +1,4 @@
--- 初始化角色、权限、超管
+--  初始化角色、权限、超管
 
 INSERT INTO `role` (`id`, `rolename`, `rolecode`, `update_time`, `create_time`, `update_by`, `create_by`, `update_id`, `create_id`) VALUES (1, '图书管理员', 'manager', '2024-07-21 01:35:14', '2024-07-21 01:35:17', '系统', '系统', -1, -1);
 INSERT INTO `role` (`id`, `rolename`, `rolecode`, `update_time`, `create_time`, `update_by`, `create_by`, `update_id`, `create_id`) VALUES (2, '普通用户', 'general', '2024-07-21 01:36:44', '2024-07-21 01:36:48', '系统', '系统', -1, -1);

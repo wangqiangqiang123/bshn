@@ -14,5 +14,6 @@ public class GlobalExceptionHandler {
     public ResponseEntity<?> handleBusinessException(BusinessException ex) {
         return ResponseEntity.status(500).body(ex);
     }
+	
 }
 

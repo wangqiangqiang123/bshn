@@ -19,7 +19,7 @@ import java.util.List;
 
 
 @Configuration // 标明是配置类
-@EnableSwagger2 //开启swagger功能
+@EnableSwagger2 // 开启swagger功能
 public class SwaggerConfig {
     @Bean
     public Docket createRestApi() {
@@ -61,16 +61,16 @@ public class SwaggerConfig {
 
         Contact contact = new Contact(
                 "王强强", // 作者姓名
-                "项目github地址", // 作者网址
+                "https://github.com/wangqiangqiang123/bshn/tree/master", // 作者网址
                 "hnwangqq_666@163.com"); // 作者邮箱
 
         return new ApiInfoBuilder()
                 .title("图书管理系统API") //  可以用来自定义API的主标题
                 .description("图书管理系统SwaggerAPI管理") // 可以用来描述整体的API
-                .termsOfServiceUrl("项目github地址") // 用于定义服务的域名（跳转链接）
+                .termsOfServiceUrl("https://github.com/wangqiangqiang123/bshn/tree/master") // 用于定义服务的域名（跳转链接）
                 .version("1.0") // 可以用来定义版本
                 .license("图书管理系统")
-                .licenseUrl("项目github地址")
+                .licenseUrl("https://github.com/wangqiangqiang123/bshn/tree/master")
                 .contact(contact)
                 .build(); //
     }

@@ -3,7 +3,7 @@ server:
     context-path: /booksmanager
 spring:
   profiles:
-    active: dev # 这里可以改成dev或test或prod来激活不同的配置文件
+    active: dev #  这里可以改成dev或test或prod来激活不同的配置文件
   mvc:
     pathmatch:
       matching-strategy: ANT_PATH_MATCHER

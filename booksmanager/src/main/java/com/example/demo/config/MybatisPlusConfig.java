@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- *  mybatis-plus 分页插件
+ *   mybatis-plus 分页插件
  */
 @Configuration
 @MapperScan("com.example.demo.mapper")

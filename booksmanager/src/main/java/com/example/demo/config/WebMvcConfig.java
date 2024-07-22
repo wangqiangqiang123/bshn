@@ -27,7 +27,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         //设置过滤器
         registrationBean.setFilter(loginTokenFilter);
         registrationBean.setName("loginFilter");
-        //拦截路径,这个就不大好，每次新增接口都得添加新的拦截器
+        //拦截路径
         registrationBean.addUrlPatterns("/*");
         registrationBean.setOrder(-1);
         return registrationBean;

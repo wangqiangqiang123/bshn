@@ -3,7 +3,7 @@
     <property name="APP_NAME" value="booksmanager"/>
     <!-- 定义日志文件的输出路径 -->
     <property name="LOG_PATH" value="./log/${APP_NAME}"/>
-    <!-- 设置控制台 日志输出 -->
+    <!-- 设置控制台日志输出 -->
     <appender name="consoleApp" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>

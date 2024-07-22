@@ -1,5 +1,5 @@
 2024-07-21 00:09:47.058 ERROR[http-nio-8086-exec-1]o.a.c.c.C.[.[.[/booksmanager].[dispatcherServlet].log:175 -Servlet.service() for servlet [dispatcherServlet] in context with path [/booksmanager] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
+java.lang.NullPointerException:  null
 	at com.example.demo.utils.TokenUtils.genToken(TokenUtils.java:41)
 	at com.example.demo.service.impl.UserServiceImpl22.register(UserServiceImpl.java:52)
 	at com.example.demo.controller.UserController2.register(UserController.java:58)
