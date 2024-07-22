@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.ReaderBookRefMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.model.ReaderBookRef">
+        <id column="id" property="id" />
+        <result column="reader_id" property="readerId" />
+        <result column="book_id" property="bookId" />
+        <result column="lend_time" property="lendTime" />
+        <result column="dead_time" property="deadTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="create_by" property="createBy" />
+        <result column="update_id" property="updateId" />
+        <result column="create_id" property="createId" />
+    </resultMap>
+
+
+    <select id="selectCount" parameterType="com.example.demo.domain.dto.LendFindPageDTO" resultType="int">
+        select
+        count(1)
+        from reader_book_ref rbr, book bk,b_user us
+        where
+        rbr.book_id=bk.id
+        and
+        rbr.reader_id=us.id
+        <if test="data.bookNo!=null and data.bookNo!=''">
+           and bk.book_no=#{data.bookNo}
+        </if>
+        <if test="data.name!=null and data.name!=''">
+            and bk.name like concat('%',#{data.name},'%')
+        </if>
+        <if test="data.username!=null and data.username!=''">
+            and us.username like concat('%',#{data.username},'%')
+        </if>
+    </select>
+
+    <select id="selectlist" parameterType="com.example.demo.domain.dto.LendFindPageDTO" resultType="com.example.demo.domain.vo.ReaderBookRefVO">
+        select
+        rbr.id,
+        rbr.reader_id readerId,
+        bk.book_no bookNo,
+        rbr.book_id bookId,
+        bk.name bookName,
+        us.username readerName,
+        us.phone,
+        rbr.lend_time lendTime,
+        rbr.dead_time deadTime,
+        rbr.create_time createTime,
+        rbr.update_time updateTime,
+        rbr.update_by updateBy,
+        rbr.create_by createBy,
+        rbr.create_id createId,
+        rbr.update_id updateId
+        from reader_book_ref rbr, book bk,b_user us
+        where
+        rbr.book_id=bk.id
+        and
+        rbr.reader_id=us.id
+        <if test="data.bookNo!=null and data.bookNo!=''">
+            and bk.book_no=#{data.bookNo}
+        </if>
+        <if test="data.name!=null and data.name!=''">
+            and bk.name like concat('%',#{data.name},'%')
+        </if>
+        <if test="data.username!=null and data.username!=''">
+            and us.username like concat('%',#{data.username},'%')
+        </if>
+        order by rbr.create_time desc
+        limit #{data.startIndex},#{data.pageSize}
+    </select>
+
+</mapper>

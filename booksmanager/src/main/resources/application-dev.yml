@@ -1,0 +1,31 @@
+# 开发环境配置
+server:
+  port: 8086
+spring:
+  datasource:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.h2.Driver
+    #url: jdbc:mysql://localhost:3306/books-manager?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8
+    url: jdbc:h2:~/books-manager
+    #username: root
+    #password:
+    username: sa
+    password: sa
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+  redis:
+    host: 127.0.0.1
+    jedis:
+      pool:
+        max-active: 50
+        max-idle: 20
+        min-idle: 10
+    port: 6379
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+white:
+  url: /booksmanager/user/login,/booksmanager/user/register,swagger,openapi,api-doc,documentation
