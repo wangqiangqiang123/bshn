@@ -1,6 +1,6 @@
 
 -- ----------------------------
--- Table structure for book 图书表
+-- Table structure for book    图书表
 -- ----------------------------
 DROP TABLE IF EXISTS `book`;
 CREATE TABLE `book`  (

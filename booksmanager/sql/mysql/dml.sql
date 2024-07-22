@@ -3,7 +3,7 @@ INSERT INTO `books-manager`.`role` (`id`, `rolename`, `rolecode`, `update_time`,
 INSERT INTO `books-manager`.`role` (`id`, `rolename`, `rolecode`, `update_time`, `create_time`, `update_by`, `create_by`, `update_id`, `create_id`) VALUES (2, '普通用户', 'general', '2024-07-21 01:36:44', '2024-07-21 01:36:48', '系统', '系统', -1, -1);
 INSERT INTO `books-manager`.`role` (`id`, `rolename`, `rolecode`, `update_time`, `create_time`, `update_by`, `create_by`, `update_id`, `create_id`) VALUES (3, '超级管理员', 'superManager', '2024-07-21 13:12:57', '2024-07-21 13:12:59', '系统', '系统', -1, -1);
 
---初始化权限
+-- 初始化权限
 INSERT INTO `books-manager`.`auth` (`id`, `module_name`, `module_code`, `auth_name`, `auth_type`, `menu_name`, `menu_url`, `update_time`, `create_time`, `update_by`, `create_by`, `update_id`, `create_id`) VALUES (1, '用户管理', 'usermanager', '修改', 'update', '密码修改', '/booksmanager/user/password', '2024-07-21 17:13:21', '2024-07-21 17:13:30', '系统', '系统', -1, -1);
 INSERT INTO `books-manager`.`auth` (`id`, `module_name`, `module_code`, `auth_name`, `auth_type`, `menu_name`, `menu_url`, `update_time`, `create_time`, `update_by`, `create_by`, `update_id`, `create_id`) VALUES (2, '用户管理', 'usermanager', '修改', 'update', '用户信息修改', '/booksmanager/user/update', '2024-07-21 17:13:21', '2024-07-21 17:13:30', '系统', '系统', -1, -1);
 INSERT INTO `books-manager`.`auth` (`id`, `module_name`, `module_code`, `auth_name`, `auth_type`, `menu_name`, `menu_url`, `update_time`, `create_time`, `update_by`, `create_by`, `update_id`, `create_id`) VALUES (3, '用户管理', 'usermanager', '删除', 'delete', '用户删除', '/booksmanager/user/deleteBatch', '2024-07-21 17:13:21', '2024-07-21 17:13:30', '系统', '系统', -1, -1);
